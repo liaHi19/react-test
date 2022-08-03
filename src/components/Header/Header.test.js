@@ -1,10 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import Header from "./Header";
 
-it("should render the same text that into title prop", () => {
-  render(<Header title="My Header" />);
-  const headingElement = screen.getByText(/my header/i);
-  expect(headingElement).toBeInTheDocument();
+describe("Header", () => {
+  it("should render the same text that into title prop", () => {
+    render(<Header title="My Header" />);
+    const headingElement = screen.getByText(/my header/i);
+    expect(headingElement).toBeInTheDocument();
+  });
 });
 
 // it("should be a heading", () => {
